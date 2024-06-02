@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]='4'
+#os.environ["CUDA_VISIBLE_DEVICES"]='4'
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 import numpy as np
@@ -88,7 +88,7 @@ if __name__=='__main__':
     data =data.dropna(subset=['StrContent'])
     #data=filter_sender_receiver(data,1) ##Get sender's message
 
-    #embedding_the_data(data) ##embedding
+    embedding_the_data(data) ##embedding
     num_clusters=30
 
     print("##开始聚类")
